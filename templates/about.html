@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Anjali Caterer & Decorators</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Background Video -->
+    <div class="video-container">
+        <video autoplay loop muted>
+            <source src="{{ url_for('static', filename='images/background.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="overlay"></div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('services') }}">Services</a>
+        <a href="{{ url_for('menu') }}">Menu</a>
+        <a href="{{ url_for('booking') }}">Booking</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <h1>About Us</h1>
+        <p>
+            Welcome to **Anjali Caterer & Decorators**, where we bring flavors to life! With over 30 years of experience, 
+            we have been serving exquisite cuisines, creating memorable experiences, and setting the benchmark in catering services. 
+        </p>
+        <p>
+            Our journey began with a passion for food and hospitality. Over the years, we have mastered the art of 
+            curating **traditional Mughal, Indian, and international dishes** to satisfy diverse tastes and occasions.
+        </p>
+        <p>
+            Whether it’s a **wedding, corporate event, birthday, or festival**, we ensure each event is a culinary delight. 
+            Our expert chefs, innovative presentation, and commitment to quality set us apart.
+        </p>
+        <h2>Our Mission</h2>
+        <p>
+            To craft unforgettable culinary experiences that bring people together, while upholding the highest standards 
+            of taste, hygiene, and customer satisfaction.
+        </p>
+        <h2>Why Choose Us?</h2>
+        <ul>
+            <li>✔ 30+ Years of Expertise</li>
+            <li>✔ Wide Range of Cuisines</li>
+            <li>✔ Customizable Menus</li>
+            <li>✔ Professional & Hygienic Services</li>
+            <li>✔ Elegant Event Decorations</li>
+        </ul>
+    </section>
+
+</body>
+</html>

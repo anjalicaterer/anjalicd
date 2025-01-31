@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Our Services - Anjali Caterer & Decorators{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Our Services</h1>
+    <p>Explore our top-notch catering and decoration services for every occasion.</p>
+</div>
+
+<section class="services-container">
+    <div class="service">
+        <img src="{{ url_for('static', filename='images/wedding_catering.jpg') }}" alt="Wedding Catering">
+        <h2>Wedding Catering</h2>
+        <p>Delicious and beautifully presented meals for your special day.</p>
+    </div>
+
+    <div class="service">
+        <img src="{{ url_for('static', filename='images/corporate_events.jpg') }}" alt="Corporate Events">
+        <h2>Corporate Events</h2>
+        <p>Professional catering solutions for meetings, conferences, and parties.</p>
+    </div>
+
+    <div class="service">
+        <img src="{{ url_for('static', filename='images/birthday_party.jpg') }}" alt="Birthday Catering">
+        <h2>Birthday Parties</h2>
+        <p>Fun and festive catering to make your celebration extra special.</p>
+    </div>
+
+    <div class="service">
+        <img src="{{ url_for('static', filename='images/live_counter.jpg') }}" alt="Live Counters">
+        <h2>Live Food Counters</h2>
+        <p>Experience the magic of live cooking stations with customized menus.</p>
+    </div>
+</section>
+
+{% endblock %}

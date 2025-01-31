@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Anjali Caterer & Decorators</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Background Video -->
+    <div class="video-container">
+        <video autoplay loop muted>
+            <source src="{{ url_for('static', filename='images/background.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="overlay"></div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('services') }}">Services</a>
+        <a href="{{ url_for('menu') }}">Menu</a>
+        <a href="{{ url_for('booking') }}">Booking</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </div>
+
+    <!-- Payment Section -->
+    <section class="payment-section">
+        <h1>Make a Secure Payment</h1>
+        <p>Select your preferred payment method and complete your transaction.</p>
+
+        <div class="payment-container">
+            <div class="payment-option">
+                <img src="{{ url_for('static', filename='images/upi.png') }}" alt="UPI">
+                <h2>UPI Payment</h2>
+                <p>Scan the QR code or enter UPI ID to complete the payment.</p>
+                <a href="#" class="btn">Pay Now</a>
+            </div>
+
+            <div class="payment-option">
+                <img src="{{ url_for('static', filename='images/credit-card.png') }}" alt="Credit/Debit Card">
+                <h2>Credit/Debit Card</h2>
+                <p>Secure payment using Visa, MasterCard, or RuPay.</p>
+                <a href="#" class="btn">Pay Now</a>
+            </div>
+
+            <div class="payment-option">
+                <img src="{{ url_for('static', filename='images/bank-transfer.png') }}" alt="Bank Transfer">
+                <h2>Bank Transfer</h2>
+                <p>Transfer directly to our account using NEFT/RTGS/IMPS.</p>
+                <a href="#" class="btn">Pay Now</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
