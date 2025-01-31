@@ -4,47 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anjali Caterer & Decorators</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-
-<!-- Background Video -->
-<div class="video-container">
-    <video autoplay loop muted>
-        <source src="{{ url_for('static', filename='images/background.mp4') }}" type="video/mp4">
+    <!-- Background Video -->
+    <video autoplay muted loop id="bg-video">
+        <source src="{{ url_for('static', filename='background.mp4') }}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-</div>
 
-<!-- Overlay -->
-<div class="overlay"></div>
+    <header>
+        <h1>Anjali Caterer & Decorators</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('menu') }}">Menu</a></li>
+                <li><a href="{{ url_for('booking') }}">Booking</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
+                <li><a href="{{ url_for('blog') }}">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!-- Navbar -->
-<div class="navbar">
-    <a href="{{ url_for('home') }}">Home</a>
-    <a href="{{ url_for('services') }}">Services</a>
-    <a href="{{ url_for('menu') }}">Menu</a>
-    <a href="{{ url_for('booking') }}">Booking</a>
-    <a href="{{ url_for('contact') }}">Contact</a>
-</div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2 class="animated-text">Delicious Catering & Elegant Decorations</h2>
+        <p>Bringing your events to life with exquisite flavors & stunning decor.</p>
+        <a href="{{ url_for('booking') }}" class="btn">Book Now</a>
+    </section>
 
-<!-- Hero Section with Animated Text -->
-<div class="hero">
-    <div class="hero-text">
-        <h1 class="animated-text">Where Taste Meets Elegance, Crafting Celebrations Beyond Imagination!</h1>
-    </div>
-</div>
+    <!-- Services Section -->
+    <section class="section">
+        <h2>Our Services</h2>
+        <p>We offer catering for weddings, corporate events, and special occasions.</p>
+        <a href="{{ url_for('services') }}" class="btn">View Services</a>
+    </section>
 
-<!-- About Us Section -->
-<section class="main-content">
-    <h2>About Us</h2>
-    <p>Located in Bansdroni, Kolkata, we have been serving delicious food for over 30 years!</p>
-</section>
+    <!-- Menu Preview -->
+    <section class="section">
+        <h2>Our Menu</h2>
+        <p>Explore our diverse range of dishes.</p>
+        <a href="{{ url_for('menu') }}" class="btn">View Menu</a>
+    </section>
 
-<!-- CTA -->
-<div class="main-content">
-    <a href="{{ url_for('booking') }}" class="btn">Book Now</a>
-</div>
+    <!-- Testimonials -->
+    <section class="section">
+        <h2>What Our Clients Say</h2>
+        <p>See what our customers have to say about our services.</p>
+        <a href="{{ url_for('testimonials') }}" class="btn">Read Testimonials</a>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="section">
+        <h2>Our Blog</h2>
+        <p>Read our latest updates and tips.</p>
+        <a href="{{ url_for('blog') }}" class="btn">Read Blog</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <h2>Contact Us</h2>
+        <p>Get in touch for bookings and inquiries.</p>
+        <a href="{{ url_for('contact') }}" class="btn">Contact Us</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Anjali Caterer & Decorators. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>

@@ -3,67 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Your Event - Anjali Caterer & Decorators</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Our Menu - Anjali Caterer & Decorators</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
 
-<!-- Background Video -->
-<div class="video-container">
-    <video autoplay loop muted>
-        <source src="{{ url_for('static', filename='images/background.mp4') }}" type="video/mp4">
+    <!-- Background Video -->
+    <video autoplay muted loop id="bg-video">
+        <source src="{{ url_for('static', filename='background.mp4') }}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-</div>
 
-<!-- Overlay -->
-<div class="overlay"></div>
+    <header>
+        <h1>Our Menu</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('menu') }}">Menu</a></li>
+                <li><a href="{{ url_for('booking') }}">Booking</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
+                <li><a href="{{ url_for('blog') }}">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!-- Navbar -->
-<div class="navbar">
-    <a href="{{ url_for('home') }}">Home</a>
-    <a href="{{ url_for('services') }}">Services</a>
-    <a href="{{ url_for('menu') }}">Menu</a>
-    <a href="{{ url_for('booking') }}">Booking</a>
-    <a href="{{ url_for('contact') }}">Contact</a>
-</div>
+    <!-- Menu Sections -->
+    <section class="section">
+        <h2>Indian Cuisine</h2>
+        <p>Experience the rich flavors of India with our curated selection of dishes.</p>
+    </section>
 
-<!-- Booking Form Section -->
-<section class="main-content">
-    <h1>Book Your Event</h1>
-    <p>Fill in the details below to book catering and decoration services.</p>
+    <section class="section">
+        <h2>International Cuisine</h2>
+        <p>We offer a variety of dishes from different parts of the world.</p>
+    </section>
 
-    <form class="booking-form" action="{{ url_for('submit_booking') }}" method="POST">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" required>
+    <section class="section">
+        <h2>Street Food</h2>
+        <p>Enjoy the best of street food, freshly prepared for your event.</p>
+    </section>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="phone">Phone Number</label>
-        <input type="text" id="phone" name="phone" required>
-
-        <label for="event">Event Type</label>
-        <select id="event" name="event">
-            <option value="wedding">Wedding</option>
-            <option value="corporate">Corporate Event</option>
-            <option value="birthday">Birthday Party</option>
-            <option value="festival">Festival Catering</option>
-            <option value="others">Others</option>
-        </select>
-
-        <label for="date">Event Date</label>
-        <input type="date" id="date" name="date" required>
-
-        <label for="guests">Number of Guests</label>
-        <input type="number" id="guests" name="guests" required>
-
-        <label for="special">Special Requests (Optional)</label>
-        <textarea id="special" name="special" rows="4"></textarea>
-
-        <button type="submit" class="btn">Submit Booking</button>
-    </form>
-</section>
+    <footer>
+        <p>© 2025 Anjali Caterer & Decorators. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>

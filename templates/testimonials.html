@@ -4,48 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testimonials - Anjali Caterer & Decorators</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-
-    <!-- Background Video -->
     <div class="video-container">
-        <video autoplay loop muted>
-            <source src="{{ url_for('static', filename='images/background.mp4') }}" type="video/mp4">
+        <video autoplay muted loop>
+            <source src="{{ url_for('static', filename='background.mp4') }}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-    </div>
-    <div class="overlay"></div>
-
-    <!-- Navbar -->
-    <div class="navbar">
-        <a href="{{ url_for('home') }}">Home</a>
-        <a href="{{ url_for('services') }}">Services</a>
-        <a href="{{ url_for('menu') }}">Menu</a>
-        <a href="{{ url_for('booking') }}">Booking</a>
-        <a href="{{ url_for('contact') }}">Contact</a>
-    </div>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials-section">
-        <h1>What Our Customers Say</h1>
-        <p>Real experiences from our happy clients!</p>
-
-        <div class="testimonials-container">
-            <div class="testimonial">
-                <p>"Anjali Caterers made my wedding reception a dream come true! The food was exquisite, and the service was top-notch. Highly recommended!"</p>
-                <h4>- Priya Sharma</h4>
-            </div>
-            <div class="testimonial">
-                <p>"Amazing experience! The catering for our corporate event was flawless. The team was professional, and the food was delicious!"</p>
-                <h4>- Rohan Mehta</h4>
-            </div>
-            <div class="testimonial">
-                <p>"Best catering service in Kolkata! The flavors were authentic, and the presentation was beautiful. Will definitely book again!"</p>
-                <h4>- Simran Kapoor</h4>
-            </div>
+        <div class="overlay"></div>
+        <div class="content">
+            <h1 class="animated-text">What Our Clients Say</h1>
         </div>
-    </section>
+    </div>
 
+    <div class="container">
+        <h2>Customer Reviews</h2>
+        {% for testimonial in testimonials %}
+            <div class="testimonial">
+                <h3>{{ testimonial[1] }}</h3>
+                <p>Rating: ⭐{{ testimonial[2] }}/5</p>
+                <p>{{ testimonial[3] }}</p>
+            </div>
+        {% endfor %}
+
+        <h3>Submit Your Review</h3>
+        <form action="{{ url_for('testimonials') }}" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="number" name="rating" placeholder="Rating (1-5)" min="1" max="5" required>
+            <textarea name="review" placeholder="Your Review" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>© 2025 Anjali Caterer & Decorators. All rights reserved.</p>
+    </footer>
 </body>
 </html>

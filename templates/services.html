@@ -1,37 +1,58 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Anjali Caterer & Decorators</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
 
-{% block title %}Our Services - Anjali Caterer & Decorators{% endblock %}
+    <!-- Background Video -->
+    <video autoplay muted loop id="bg-video">
+        <source src="{{ url_for('static', filename='background.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-{% block content %}
-<div class="page-header">
-    <h1>Our Services</h1>
-    <p>Explore our top-notch catering and decoration services for every occasion.</p>
-</div>
+    <header>
+        <h1>Our Services</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('menu') }}">Menu</a></li>
+                <li><a href="{{ url_for('booking') }}">Booking</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
+                <li><a href="{{ url_for('blog') }}">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<section class="services-container">
-    <div class="service">
-        <img src="{{ url_for('static', filename='images/wedding_catering.jpg') }}" alt="Wedding Catering">
-        <h2>Wedding Catering</h2>
-        <p>Delicious and beautifully presented meals for your special day.</p>
-    </div>
+    <!-- Services Section -->
+    <section class="section">
+        <h2>Event-Based Catering</h2>
+        <p>We cater for weddings, corporate events, birthdays, and more.</p>
+    </section>
 
-    <div class="service">
-        <img src="{{ url_for('static', filename='images/corporate_events.jpg') }}" alt="Corporate Events">
-        <h2>Corporate Events</h2>
-        <p>Professional catering solutions for meetings, conferences, and parties.</p>
-    </div>
+    <section class="section">
+        <h2>Cuisine-Based Catering</h2>
+        <p>Choose from Indian, International, or Street Food options.</p>
+    </section>
 
-    <div class="service">
-        <img src="{{ url_for('static', filename='images/birthday_party.jpg') }}" alt="Birthday Catering">
-        <h2>Birthday Parties</h2>
-        <p>Fun and festive catering to make your celebration extra special.</p>
-    </div>
+    <section class="section">
+        <h2>Service Styles</h2>
+        <p>Buffet, plated meals, live counters, and packed meal services available.</p>
+    </section>
 
-    <div class="service">
-        <img src="{{ url_for('static', filename='images/live_counter.jpg') }}" alt="Live Counters">
-        <h2>Live Food Counters</h2>
-        <p>Experience the magic of live cooking stations with customized menus.</p>
-    </div>
-</section>
+    <section class="section">
+        <h2>Specialized Catering</h2>
+        <p>We provide vegetarian, vegan, diet-specific, and luxury catering options.</p>
+    </section>
 
-{% endblock %}
+    <footer>
+        <p>© 2025 Anjali Caterer & Decorators. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

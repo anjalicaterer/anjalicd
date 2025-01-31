@@ -1,43 +1,53 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu - Anjali Caterer & Decorators</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
 
-{% block title %}Our Menu - Anjali Caterer & Decorators{% endblock %}
+    <!-- Background Video -->
+    <video autoplay muted loop id="bg-video">
+        <source src="{{ url_for('static', filename='background.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-{% block content %}
-<div class="page-header">
-    <h1>Our Menu</h1>
-    <p>Explore our wide range of delicious cuisines and specialty dishes.</p>
-</div>
+    <header>
+        <h1>Our Menu</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('menu') }}">Menu</a></li>
+                <li><a href="{{ url_for('booking') }}">Booking</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
+                <li><a href="{{ url_for('blog') }}">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<section class="menu-container">
-    <div class="menu-category">
+    <!-- Menu Sections -->
+    <section class="section">
         <h2>Indian Cuisine</h2>
-        <ul>
-            <li>Butter Chicken</li>
-            <li>Paneer Tikka</li>
-            <li>Dal Makhani</li>
-            <li>Biryani</li>
-        </ul>
-    </div>
+        <p>Experience the rich flavors of India with our curated selection of dishes.</p>
+    </section>
 
-    <div class="menu-category">
+    <section class="section">
         <h2>International Cuisine</h2>
-        <ul>
-            <li>Pasta Alfredo</li>
-            <li>Sushi Rolls</li>
-            <li>Mexican Tacos</li>
-            <li>French Pastries</li>
-        </ul>
-    </div>
+        <p>We offer a variety of dishes from different parts of the world.</p>
+    </section>
 
-    <div class="menu-category">
-        <h2>Street Food Specials</h2>
-        <ul>
-            <li>Pani Puri</li>
-            <li>Pav Bhaji</li>
-            <li>Chaat Platter</li>
-            <li>Kathi Rolls</li>
-        </ul>
-    </div>
-</section>
+    <section class="section">
+        <h2>Street Food</h2>
+        <p>Enjoy the best of street food, freshly prepared for your event.</p>
+    </section>
 
-{% endblock %}
+    <footer>
+        <p>© 2025 Anjali Caterer & Decorators. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

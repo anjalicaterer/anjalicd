@@ -4,56 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Anjali Caterer & Decorators</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-
-    <!-- Background Video -->
     <div class="video-container">
-        <video autoplay loop muted>
-            <source src="{{ url_for('static', filename='images/background.mp4') }}" type="video/mp4">
+        <video autoplay muted loop>
+            <source src="{{ url_for('static', filename='background.mp4') }}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-    </div>
-    <div class="overlay"></div>
-
-    <!-- Navbar -->
-    <div class="navbar">
-        <a href="{{ url_for('home') }}">Home</a>
-        <a href="{{ url_for('services') }}">Services</a>
-        <a href="{{ url_for('menu') }}">Menu</a>
-        <a href="{{ url_for('booking') }}">Booking</a>
-        <a href="{{ url_for('contact') }}">Contact</a>
-    </div>
-
-    <!-- Blog Section -->
-    <section class="blog-section">
-        <h1>Our Latest Blog Posts</h1>
-        <p>Stay updated with our latest insights, trends, and events!</p>
-
-        <div class="blog-container">
-            <div class="blog-post">
-                <img src="{{ url_for('static', filename='images/blog1.jpg') }}" alt="Delicious Wedding Menu">
-                <h2>The Art of Crafting a Perfect Wedding Menu</h2>
-                <p>Discover how to create a wedding menu that leaves a lasting impression on your guests.</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-
-            <div class="blog-post">
-                <img src="{{ url_for('static', filename='images/blog2.jpg') }}" alt="Corporate Catering Tips">
-                <h2>5 Key Tips for Corporate Event Catering</h2>
-                <p>Planning a corporate event? Here’s what you need to consider for a seamless dining experience.</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-
-            <div class="blog-post">
-                <img src="{{ url_for('static', filename='images/blog3.jpg') }}" alt="Indian Festive Catering">
-                <h2>Indian Festive Catering: Bringing Traditions to Life</h2>
-                <p>Learn how we blend authentic Indian flavors with modern presentations.</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
+        <div class="overlay"></div>
+        <div class="content">
+            <h1 class="animated-text">Our Blog</h1>
+            <p>Stay updated with our latest articles and catering tips.</p>
         </div>
-    </section>
+    </div>
 
+    <div class="container">
+        <h2>Latest Posts</h2>
+        <ul>
+            <li>Top 10 Wedding Catering Trends for 2025</li>
+            <li>How to Plan a Perfect Corporate Event</li>
+            <li>5 Must-Have Dishes for an Indian Wedding</li>
+            <li>The Benefits of Hiring a Professional Caterer</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>© 2025 Anjali Caterer & Decorators. All rights reserved.</p>
+    </footer>
 </body>
 </html>

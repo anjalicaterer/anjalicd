@@ -3,55 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Anjali Caterer & Decorators</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Book Now - Anjali Caterer & Decorators</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-
-    <!-- Background Video -->
     <div class="video-container">
-        <video autoplay loop muted>
-            <source src="{{ url_for('static', filename='images/background.mp4') }}" type="video/mp4">
+        <video autoplay muted loop>
+            <source src="{{ url_for('static', filename='background.mp4') }}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-    </div>
-    <div class="overlay"></div>
-
-    <!-- Navbar -->
-    <div class="navbar">
-        <a href="{{ url_for('home') }}">Home</a>
-        <a href="{{ url_for('services') }}">Services</a>
-        <a href="{{ url_for('menu') }}">Menu</a>
-        <a href="{{ url_for('booking') }}">Booking</a>
-        <a href="{{ url_for('contact') }}">Contact</a>
-    </div>
-
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <h1>Contact Us</h1>
-        <p>Reach out to us for inquiries, bookings, or any questions!</p>
-
-        <div class="contact-container">
-            <!-- Contact Details -->
-            <div class="contact-info">
-                <p><strong>📍 Address:</strong> Bansdroni, Kolkata, India</p>
-                <p><strong>📞 Phone:</strong> +91 98765 43210</p>
-                <p><strong>📧 Email:</strong> info@anjalicaterers.com</p>
-                <p><strong>⏰ Hours:</strong> Mon-Sun, 9 AM - 10 PM</p>
-            </div>
-
-            <!-- Contact Form -->
-            <div class="contact-form">
-                <form action="{{ url_for('contact') }}" method="POST">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <input type="text" name="subject" placeholder="Subject" required>
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
-            </div>
+        <div class="overlay"></div>
+        <div class="content">
+            <h1 class="animated-text">Book Your Event</h1>
+            <p>Secure your date with Anjali Caterer & Decorators</p>
         </div>
-    </section>
+    </div>
 
+    <div class="container">
+        <h2>Book Now</h2>
+        <form action="{{ url_for('booking') }}" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" title="Please enter your full name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" title="Please enter a valid email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" title="Please enter a valid phone number" required>
+
+            <label for="date">Event Date:</label>
+            <input type="date" id="date" name="date" title="Select your event date" required>
+
+            <label for="time">Event Time:</label>
+            <input type="time" id="time" name="time" title="Select your event time" required>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" placeholder="Enter number of guests" title="Specify the number of guests" required>
+
+            <label for="message">Additional Details:</label>
+            <textarea id="message" name="message" placeholder="Enter any special requests" title="Provide any additional details"></textarea>
+
+            <button type="submit">Confirm Booking</button>
+        </form>
+
+        <p>Or book via our booking system:</p>
+        <a href="https://anjalicatereranddecorators.zohobookings.in/#/266088000000042046" class="btn" target="_blank" rel="noopener">Book Online</a>
+    </div>
+
+    <footer>
+        <p>© 2025 Anjali Caterer & Decorators. All rights reserved.</p>
+    </footer>
 </body>
 </html>
