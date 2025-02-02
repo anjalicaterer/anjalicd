@@ -75,12 +75,14 @@ nav ul li a {
     background-color: #1e1e1e; /* Dark background for content area */
     border-radius: 8px;
     border: 1px solid #333; /* Border for content container */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
 
 /* Header styles */
 h1, h2, h3, p {
     color: #f0f0f0;
     margin-bottom: 20px;
+    padding: 0 10px; /* Added some horizontal padding */
 }
 
 /* Home page specific */
@@ -197,5 +199,9 @@ footer {
 
     .container {
         padding-top: 60px;
+    }
+
+    footer {
+        position: relative;
     }
 }
