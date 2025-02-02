@@ -1,6 +1,5 @@
 from flask import Flask, render_template
 
-# Initialize the Flask app
 app = Flask(__name__)
 
 # Route for the homepage
@@ -18,6 +17,11 @@ def services():
 def menu():
     return render_template('menu.html')
 
+# Route for the contact page
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
 # Route for the testimonials page
 @app.route('/testimonials')
 def testimonials():
@@ -28,5 +32,6 @@ def testimonials():
 def contact():
     return render_template('contact.html')
 
-if __name__ == "__main__":
+# Start the Flask app
+if __name__ == '__main__':
     app.run(debug=True)
