@@ -4,10 +4,11 @@ body {
     padding: 0;
     color: #f0f0f0;
     overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: #121212; /* Dark background for the body */
 }
 
-/* Fixed video background */
-body::before {
+/* Video background only for the home page */
+#home::before {
     content: '';
     position: fixed;
     top: 0;
@@ -18,14 +19,17 @@ body::before {
     background: url('videos/background.mp4') no-repeat center center fixed;
     background-size: cover;
     opacity: 0.7;
+    border: 5px solid #333; /* Border around the video */
 }
 
+/* Header styles */
 header {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 10px 0;
     position: fixed;
     width: 100%;
     z-index: 100;
+    border-bottom: 2px solid #444; /* Border for header */
 }
 
 nav {
@@ -62,13 +66,18 @@ nav ul li a {
     margin-left: 10px;
 }
 
+/* Content container */
 .container {
     padding-top: 70px; /* Space for fixed header */
     margin: 0 auto;
     max-width: 1200px;
     padding: 20px;
+    background-color: #1e1e1e; /* Dark background for content area */
+    border-radius: 8px;
+    border: 1px solid #333; /* Border for content container */
 }
 
+/* Header styles */
 h1, h2, h3, p {
     color: #f0f0f0;
     margin-bottom: 20px;
@@ -92,6 +101,7 @@ h1, h2, h3, p {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border: 2px solid #333; /* Border for service items */
 }
 
 /* Menu page specific */
@@ -102,6 +112,7 @@ h1, h2, h3, p {
     background: rgba(255, 255, 255, 0.1);
     padding: 10px;
     border-radius: 5px;
+    border: 1px solid #444; /* Border for menu items */
 }
 
 .menu-item img {
@@ -117,6 +128,7 @@ h1, h2, h3, p {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
+    border: 2px solid #333; /* Border for testimonials */
 }
 
 /* Contact page specific */
@@ -125,6 +137,10 @@ h1, h2, h3, p {
     flex-direction: column;
     max-width: 500px;
     margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    border: 2px solid #333; /* Border for contact form */
 }
 
 #contact-form input, #contact-form select, #contact-form textarea {
@@ -133,12 +149,14 @@ h1, h2, h3, p {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: #f0f0f0;
+    border-radius: 5px;
 }
 
 #map {
     height: 300px;
     width: 100%;
     margin-top: 20px;
+    border: 2px solid #444; /* Border for map */
 }
 
 footer {
@@ -149,6 +167,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    border-top: 2px solid #444; /* Border for footer */
 }
 
 .whatsapp-button {
