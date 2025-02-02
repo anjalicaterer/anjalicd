@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anjali Caterer & Decorators - Home</title>
-    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <header>
         <nav>
-            <img src="images/anjalilogo1.jpg" alt="Anjali Caterer & Decorators Logo" id="logo">
+            <img src="{{ url_for('static', filename='images/anjalilogo1.jpg') }}" alt="Logo" id="logo">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('menu') }}">Menu</a></li>
+                <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
             </ul>
             <a href="#book" class="cta-button">Book Now</a>
         </nav>
@@ -23,11 +23,16 @@
 
     <div class="container">
         <section id="home">
+            <div class="video-background">
+                <video autoplay muted loop id="background-video">
+                    <source src="{{ url_for('static', filename='videos/background.mp4') }}" type="video/mp4">
+                </video>
+            </div>
             <div class="hero-content">
                 <h1>Exquisite Catering & Elegant Decorations for Every Occasion!</h1>
                 <p>Delicious Food | Stunning Decor | Hassle-Free Service</p>
-                <a href="menu.html" class="cta-button">View Our Menu</a>
-                <a href="contact.html" class="cta-button">Get a Quote</a>
+                <a href="{{ url_for('menu') }}" class="cta-button">View Our Menu</a>
+                <a href="{{ url_for('contact') }}" class="cta-button">Get a Quote</a>
             </div>
         </section>
 
@@ -41,6 +46,6 @@
         <p>© 2025 Anjali Caterer & Decorators. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
