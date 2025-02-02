@@ -28,11 +28,15 @@
                 <input type="text" placeholder="Name" required>
                 <input type="email" placeholder="Email" required>
                 <input type="tel" placeholder="Phone" required>
-                <select name="inquiry" id="inquiry-type">
+                
+                <!-- Label for the inquiry type dropdown -->
+                <label for="inquiry-type">Inquiry Type</label>
+                <select name="inquiry" id="inquiry-type" required>
                     <option value="wedding">Wedding Catering</option>
                     <option value="corporate">Corporate Catering</option>
                     <!-- Add more options as needed -->
                 </select>
+                
                 <textarea placeholder="Your Message" required></textarea>
                 <button type="submit">Submit</button>
             </form>
