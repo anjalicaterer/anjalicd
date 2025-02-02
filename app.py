@@ -27,11 +27,6 @@ def contact():
 def testimonials():
     return render_template('testimonials.html')
 
-# Route for the contact page
-@app.route('/contact')
-def contact():
-    return render_template('contact.html')
-
 # Start the Flask app
 if __name__ == '__main__':
     app.run(debug=True)
