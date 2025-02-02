@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anjali Caterer & Decorators</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="images/anjalilogo1.jpg" alt="Anjali Caterer & Decorators Logo" id="logo">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#book" class="cta-button">Book Now</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+        <video autoplay loop muted playsinline>
+            <source src="images/background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <h1>Exquisite Catering & Elegant Decorations for Every Occasion!</h1>
+            <p>Delicious Food | Stunning Decor | Hassle-Free Service</p>
+            <a href="#menu" class="cta-button">View Our Menu</a>
+            <a href="#contact" class="cta-button">Get a Quote</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Anjali Caterer & Decorators, located in Bansdroni, Kolkata, has been a trusted name in the catering and decoration industry for over 30 years. Renowned for delivering exceptional service and delectable food, we specialize in making every event memorable with our impeccable attention to detail and creativity.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-item">
+            <h3>Event-Based Catering</h3>
+            <p>Comprehensive packages for weddings and special occasions with menu customization, various service styles, and thematic decor.</p>
+        </div>
+        <div class="service-item">
+            <h3>Cuisine-Based Catering</h3>
+            <p>Specializing in a variety of cuisines with the ability to customize menus to match your culinary desires.</p>
+        </div>
+        <div class="service-item">
+            <h3>Service Styles</h3>
+            <p>From buffets to live counters, offering interactive and diverse dining experiences.</p>
+        </div>
+        <div class="service-item">
+            <h3>Specialized Catering</h3>
+            <p>Catering to dietary needs with vegetarian, vegan, gluten-free, and sugar-free options.</p>
+        </div>
+        <a href="#services-page" class="cta-button">View All Services</a>
+    </section>
+
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-item">
+            <img src="images/dish-image.jpg" alt="Dish Name">
+            <h3>Bengali Biryani</h3>
+            <p>Our signature dish, rich in flavors with traditional spices.</p>
+            <span>Price: ₹250 per plate</span>
+        </div>
+        <a href="#menu-page" class="cta-button">See Full Menu</a>
+    </section>
+
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial-item">
+            <p>⭐⭐⭐⭐⭐ "Authentic Bengali Delicacies!"</p>
+            <p>Anirban Chatterjee | Salt Lake, Kolkata</p>
+            <p>"The food was absolutely divine! From the kosha mangsho to the luchis, everything was perfectly prepared."</p>
+        </div>
+        <!-- Add more testimonials here -->
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone" required>
+            <select name="inquiry" id="inquiry-type">
+                <option value="wedding">Wedding Catering</option>
+                <option value="corporate">Corporate Catering</option>
+                <!-- Add more options as needed -->
+            </select>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="map"></div>
+        <p>Address: 145 Harisabha Math, Brahmapur, Rishi Raj Narayan Rd, opposite Agaraduth Club, Bansdroni, Kolkata, West Bengal 700070</p>
+        <p>Phone: +91 62900 56640 | Email: anjalicatereranddecorators@gmail.com</p>
+        <a href="whatsapp://send?phone=+919876543210" class="whatsapp-button">Chat on WhatsApp</a>
+    </section>
+
+    <footer>
+        <p>© 2025 Anjali Caterer & Decorators. All rights reserved.</p>
+        <div class="social-media">
+            <!-- Social media icons -->
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</body>
+</html>
+<label for="name">Name:</label>
+<input type="text" id="name" placeholder="Name" required>
+
+<label for="email">Email:</label>
+<input type="email" id="email" placeholder="Email" required>
+
+<label for="phone">Phone:</label>
+<input type="tel" id="phone" placeholder="Phone" required>
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Phone" required>
+        <label for="inquiry-type">Inquiry Type:</label>
+        <select name="inquiry" id="inquiry-type">
+            <option value="wedding">Wedding Catering</option>
+            <option value="corporate">Corporate Catering</option>
+            <!-- Add more options as needed -->
+        </select>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="map"></div>
+    <p>Address: 145 Harisabha Math, Brahmapur, Rishi Raj Narayan Rd, opposite Agaraduth Club, Bansdroni, Kolkata, West Bengal 700070</p>
+    <p>Phone: +91 62900 56640 | Email: anjalicatereranddecorators@gmail.com</p>
+    <a href="whatsapp://send?phone=+919876543210" class="whatsapp-button">Chat on WhatsApp</a>
+</section>
