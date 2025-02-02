@@ -2,13 +2,30 @@ body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    color: #f0f0f0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Fixed video background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url('videos/background.mp4') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.7;
 }
 
 header {
-    background-color: #333;
-    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 }
 
 nav {
@@ -19,7 +36,7 @@ nav {
 }
 
 #logo {
-    width: 100px;
+    height: 50px;
 }
 
 nav ul {
@@ -32,7 +49,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #f0f0f0;
     text-decoration: none;
 }
 
@@ -42,33 +59,28 @@ nav ul li a {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    margin-left: 10px;
 }
 
-.hero-section {
-    position: relative;
-    height: 600px;
-    overflow: hidden;
-}
-
-.hero-section video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-}
-
-#about, #services, #menu, #testimonials, #contact {
+.container {
+    padding-top: 70px; /* Space for fixed header */
+    margin: 0 auto;
+    max-width: 1200px;
     padding: 20px;
 }
 
+h1, h2, h3, p {
+    color: #f0f0f0;
+    margin-bottom: 20px;
+}
+
+/* Home page specific */
+#home .hero-content {
+    text-align: center;
+    padding-top: 200px;
+}
+
+/* Services page specific */
 #services {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -76,20 +88,20 @@ nav ul li a {
 }
 
 .service-item {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-.service-item h3 {
-    color: #ff4500;
-}
-
+/* Menu page specific */
 .menu-item {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .menu-item img {
@@ -99,15 +111,15 @@ nav ul li a {
     margin-right: 20px;
 }
 
-.menu-item h3 {
-    margin: 0;
-    color: #ff4500;
+/* Testimonials page specific */
+.testimonial-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
 }
 
-#contact {
-    background-color: white;
-}
-
+/* Contact page specific */
 #contact-form {
     display: flex;
     flex-direction: column;
@@ -118,18 +130,25 @@ nav ul li a {
 #contact-form input, #contact-form select, #contact-form textarea {
     margin-bottom: 10px;
     padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #f0f0f0;
 }
 
 #map {
     height: 300px;
     width: 100%;
+    margin-top: 20px;
 }
 
 footer {
-    background-color: #333;
-    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #f0f0f0;
     text-align: center;
     padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .whatsapp-button {
@@ -139,8 +158,25 @@ footer {
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
+    margin-top: 20px;
 }
-label {
-    display: block;
-    margin-bottom: 5px;
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #logo {
+        height: 40px;
+    }
+
+    .container {
+        padding-top: 60px;
+    }
 }
