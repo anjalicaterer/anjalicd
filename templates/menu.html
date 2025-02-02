@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anjali Caterer & Decorators - Menu</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <header>
         <nav>
-            <img src="images/anjalilogo1.jpg" alt="Anjali Caterer & Decorators Logo" id="logo">
+            <img src="{{ url_for('static', filename='images/anjalilogo1.jpg') }}" alt="Anjali Caterer & Decorators Logo" id="logo">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
@@ -21,18 +21,26 @@
         </nav>
     </header>
 
+    <!-- Video Background for consistency across pages -->
+    <section id="home">
+        <div class="hero-content">
+            <h1>Our Delicious Menu</h1>
+            <p>Explore a wide variety of dishes, from traditional to modern, crafted to perfection!</p>
+        </div>
+    </section>
+
     <div class="container">
         <section id="menu">
             <h2>Our Menu</h2>
             <div class="menu-item">
-                <img src="images/dish-image.jpg" alt="Dish Name">
+                <img src="{{ url_for('static', filename='images/dish-image.jpg') }}" alt="Bengali Biryani">
                 <div>
                     <h3>Bengali Biryani</h3>
                     <p>Our signature dish, rich in flavors with traditional spices.</p>
                     <span>Price: ₹250 per plate</span>
                 </div>
             </div>
-            <!-- Add more menu items as needed -->
+            <!-- More menu items can be added here -->
         </section>
     </div>
 
@@ -40,6 +48,6 @@
         <p>© 2025 Anjali Caterer & Decorators. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
